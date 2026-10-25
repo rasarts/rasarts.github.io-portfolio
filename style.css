@@ -11,7 +11,7 @@ body {
   padding: 0;
   min-height: 100vh;
 }
-img {
+images {
   max-width: 100%;
   height: auto;
 }
@@ -22,12 +22,14 @@ body {
   background-color: black;
   color: white;
     display: grid;
-    grid-template-columns: 30vw 40vw 30vw;
-    grid-template-rows: 20vh 25vh 60vh;
+    grid-template-columns: 29vw 40vw 29vw;
+    grid-template-rows: 20vh 25vh 60vh 20vh 40vh;
 }
 
 h1 {
   color: red;
+  text-align: center;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -37,24 +39,23 @@ h2 {
   text-align: center;
 }
 
-h1 {
-  font-size: 50px;
-  text-align: center;
-}
-
 li {
     font-size: 25px;
 }
 
 p {
-  font-size: 25px;
+  font-size: 30px;
 }
+
+/*---------------*/
 
 #startbalk {
     background-color: blanchedalmond;
     grid-column: 1/4;
     grid-row: 1/2;
 }
+
+/*---------------*/
 
 .welkomvlak {
   grid-column:1;
@@ -66,6 +67,16 @@ p {
 #welkom {
     margin-right: 10px;
     text-align: center;
+    margin: 45px;
+}
+
+#TopPicture{
+   background-image: url("images/hadestown-musical.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column:2/3;
+    grid-row:2/3;
 }
 
 #carre {
@@ -74,8 +85,18 @@ p {
   background-color: peru;
 }
 
+#carre h2 {
+  transition: color 0.3s ease;
+}
+
+#carre:hover h2 {
+  color: blue;
+}
+
+/*---------------*/
+
 #poster {
-  background-image: url("img/Hadestown poster.jpg");
+  background-image: url("images/Hadestown poster.jpg");
   grid-column:1;
   grid-row:3;
   background-color:blue;
@@ -84,34 +105,86 @@ p {
   background-position: center;
 }
 
+#BottomPicture {
+    background-image: url("images/hadestown foto.webp");
+    background-repeat: no-repeat;
+    background-size: contain; 
+    grid-column:2/3;
+    grid-row:3/4; 
+}
+
 #rollen {
   background-color: hotpink;
   grid-column:3;
   grid-row:3;
 }
 
-#TopPicture{
-   background-image: url("img/hadestown-musical.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-column:2/3;
-    grid-row:2/3;
+/*---------------*/
+
+#blokje {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  transition: color 0.3s ease;
+  grid-column:1;
+  grid-row:4;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
-#BottomPicture {
-    background-image: url("img/hadestown foto.webp");
-    background-repeat: no-repeat;
-    background-size: contain; 
-    grid-column:2/3;
-    grid-row:3/4; 
+#blokje:hover {
+  color: blue;
 }
-/*
-#BottomPicture {
-    background-image: url("img/hadestown-musical.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    grid-column:2/4;
-    grid-row:3/4; 
+
+#knopvak {
+  grid-column:1;
+  grid-row:5;
+  background-color: yellow;
 }
-*/
+
+#knop {
+  cursor: pointer;
+  grid-column:1;
+  grid-row:5;
+  background-color: green;
+  margin: 50px;
+  text-align: center;
+  place-items: center;
+  border-radius: 10px;
+}
+
+#knop:hover {
+  color: red;
+}
+
+#bloemvak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column:2;
+  grid-row: 4 / 6;
+  background-color: red;
+}
+
+#bloem{
+  width: 350px;
+  height: 350px;
+  background-image: url("images/red carnation knol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#trailer {
+  grid-column: 3;
+  grid-row: 4 / 6;
+}
+
+#trailer iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
